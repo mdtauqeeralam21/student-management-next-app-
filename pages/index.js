@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
-import Login from '@/components/Login'
-import Link from 'next/link'
+import Layout from '@/components/Layout'
+import HomePage from '@/components/Homepage'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -8,10 +8,9 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <>
-    <Login />
-    <div>
-    <Link href='/list'>List</Link>
-    </div>
+    <Layout>
+    <HomePage/>
+    </Layout>
     </>
   )
 }

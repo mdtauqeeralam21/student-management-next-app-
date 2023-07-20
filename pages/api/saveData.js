@@ -1,8 +1,20 @@
 export default async function handler(req, res) {
     if (req.method === 'POST') {
-      const { name, age, email } = req.body;
+      const { fullName,
+      email,
+      degree,
+      branch,
+      yearOfPassed,
+      description,
+      photoUrl, } = req.body;
   
-      const newData = { name, age: Number(age), email };
+      const newData = { fullName,
+        email,
+        degree,
+        branch,
+        yearOfPassed,
+        description,
+        photoUrl };
   
       try {
         const response = await fetch('http://localhost:9999/student', {

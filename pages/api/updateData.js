@@ -1,9 +1,9 @@
 export default async function handler(req, res) {
+    const {id} = route.query;
     if (req.method === 'PUT') {
-      const { id, name, age, email } = req.body;
+      const { name, age, email, } = req.body;
   
       try {
-        // Make a PUT request to JSON Server with the updated data
         const response = await fetch(`http://localhost:9999/data/${id}`, {
           method: 'PUT',
           headers: {
