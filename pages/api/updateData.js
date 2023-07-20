@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
-    const {id} = route.query;
+    const {id} = req.query;
     if (req.method === 'PUT') {
-      const { name, age, email, } = req.body;
+      const { fullName, email, degree,branch , yearOfPased, description,photoUrl } = req.body;
   
       try {
         const response = await fetch(`http://localhost:9999/data/${id}`, {
@@ -9,7 +9,7 @@ export default async function handler(req, res) {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ name, age, email }),
+          body: JSON.stringify({ fullName, email,degree,branch, yearOfPased, description,photoUrl }),
         });
   
         if (!response.ok) {

@@ -22,7 +22,7 @@ export default function UpdateForm(){
 
       const fetchStudent = async () => {
         try {
-          const response = await fetch(`/api/getStudent?id=${id}`);
+          const response = await fetch(`/api/getOne/${id}`);
           const data = await response.json();
           setFormData(data);
         } catch (error) {
@@ -59,7 +59,7 @@ export default function UpdateForm(){
         e.preventDefault();
       
         try {
-          const response = await fetch(`/api/saveData?id=${id}`, {
+          const response = await fetch(`http://localhost:9999/student/${id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',

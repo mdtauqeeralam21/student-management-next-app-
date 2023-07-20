@@ -8,7 +8,8 @@ export default async function handler(req, res) {
       description,
       photoUrl, } = req.body;
   
-      const newData = { fullName,
+      const newData = { 
+        fullName,
         email,
         degree,
         branch,
@@ -26,7 +27,7 @@ export default async function handler(req, res) {
         });
   
         if (!response.ok) {
-          throw new Error('Failed to save data in JSON Server');
+          throw new Error('Failed to save data');
         }
   
         const responseData = await response.json();

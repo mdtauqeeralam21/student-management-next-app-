@@ -8,12 +8,12 @@ const Navbar = () => {
     <div className="nav">
     <input type="checkbox" id="nav-check"/>
   <div className="nav-header">
-    <div class="nav-title">
+    <div className="nav-title">
       ALUMNI PORTAL
     </div>
   </div>
   <div className="nav-btn">
-    <label for="nav-check">
+    <label className="nav-check">
       <span></span>
       <span></span>
       <span></span>
@@ -22,7 +22,7 @@ const Navbar = () => {
   
   <div className="nav-links">
     <Link href="/">HOME</Link>
-    <Link href="/list">ALUMNI LIST</Link>
+    <Link href="/student">ALUMNI LIST</Link>
     {/* <Login/> */}
   </div>
 </div>
