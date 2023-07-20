@@ -1,0 +1,7 @@
+{
+    "alumnis":[
+        {"id":1,"name":"Fiza","age":20,"email":"fiza@gmail.com"},
+        {"id":2,"name":"Yousuf","age":21,"email":"Yousuf@gmail.com"},
+        {"id":3,"name":"Aliya","age":30,"email":"aaliya@gmail.com"}
+    ]
+}
