@@ -7,7 +7,7 @@ export default function Layout({children}){
         <header>
         <Navbar/>
         </header>
-        <main className="mt-32">
+        <main className="mt-24">
         {children}
         </main>
         <div>

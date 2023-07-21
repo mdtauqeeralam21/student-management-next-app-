@@ -73,7 +73,7 @@
   .tableContainer {
     overflow-x: auto;
     width: auto;
-    padding-top: 90px;
+    padding-top: 0px;
   }
   
   .table {

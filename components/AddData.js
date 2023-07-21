@@ -3,7 +3,7 @@ import TextInput from './TextInput';
 import Textarea from './TextArea';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-
+import Link from 'next/link';
 
 export default function AddData(){
     const [formData, setFormData] = useState({
@@ -55,7 +55,7 @@ export default function AddData(){
           });
       
           if (response.ok) {
-            router.push('/'); 
+            router.push('/student'); 
           } else {
             console.error('Form submission failed.');
           }
@@ -139,6 +139,14 @@ export default function AddData(){
       >
         Submit
       </button>
+      <Link href={"/student"}>
+      <button
+      className="text-white bg-black hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+      >
+        back
+      </button>
+      </Link>
+
       </div>
     </form>
     </div>

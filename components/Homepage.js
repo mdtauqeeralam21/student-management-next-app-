@@ -1,7 +1,10 @@
+import Login from "./Login";
+
 export default function HomePage() {
     return (
       <>
      <div className="wel-container">
+      <Login />
           <img className="wel-image" src="home-welcome.jpg" alt="Image" />
           <div className="wel-overlay-text">
             <span className="wel-span">

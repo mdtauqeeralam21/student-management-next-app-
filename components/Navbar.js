@@ -23,7 +23,6 @@ const Navbar = () => {
   <div className="nav-links">
     <Link href="/">HOME</Link>
     <Link href="/student">ALUMNI LIST</Link>
-    {/* <Login/> */}
   </div>
 </div>
 </div>
