@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Skeleton from "@/components/Skeleton";
 export default function StudentList() {
   const [data,setdata] = useState([])
   function click(){
@@ -7,18 +8,23 @@ export default function StudentList() {
     .then((response) => response.json())
     .then((json) => setdata(json))
   }
+
+  if(!data){
+    return<Skeleton />
+  }
+
   useEffect(()=>{
     click()
   },[])
   return (
     
     <>
-    <Link href={"/add"}
-    className="flex flex-col">
-    <div className="bg-blue-500 rounded text-center p-3 w-1/7 mr-2 self-end">
+    <div className="flex flex-col">
+    <Link href={"/add"} className="bg-blue-500 text-white rounded text-center p-3 w-1/7 mr-2 self-end ">
     Add Details
-    </div>
     </Link>
+    </div>
+    
     <div className="tableContainer">
       <table className="table">
         <thead className="tableHead">

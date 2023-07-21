@@ -8,7 +8,7 @@ export async function getServerSideProps({ params }) {
   const { id } = params;
   
   try {
-    const response = await fetch(`http://localhost:9999/student/${id}`);
+    const response = await fetch(`https://elnryz510e.execute-api.us-east-1.amazonaws.com/dev/alumni/id/${id}`);
     if (!response.ok) {
       throw new Error('Student not found');
     }
@@ -27,7 +27,7 @@ const StudentDetails = ({ student }) => {
   const [deleteMessage, setDeleteMessage] = useState('');
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:9999/student/${student.id}`, {
+      const response = await fetch(`https://elnryz510e.execute-api.us-east-1.amazonaws.com/dev/alumni/id/${student.id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -53,7 +53,6 @@ const StudentDetails = ({ student }) => {
   if (!student) {
     return <Skeleton />;
   }
-
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <div className=" container w-2/3 p-8 bg-white rounded shadow flex">
@@ -81,7 +80,6 @@ const StudentDetails = ({ student }) => {
       </div>):<div></div>
       }
           </div>
-          {deleteMessage && <p className="mt-4">{deleteMessage}</p>}
         </div>
         <div className="w-2/5 pl-6 flex justify-end">
           <img src={student.photoUrl} alt="Student Photo" className="w-32 h-32 rounded-full" />
