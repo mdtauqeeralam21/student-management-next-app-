@@ -4,7 +4,7 @@ export default async function handler(req, res) {
       const { fullName, email, degree,branch , yearOfPased, description,photoUrl } = req.body;
   
       try {
-        const response = await fetch(`https://elnryz510e.execute-api.us-east-1.amazonaws.com/dev/alumni/${id}/${email}`, {
+        const response = await fetch(`http://localhost:3030/alumnis/${id}/${email}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

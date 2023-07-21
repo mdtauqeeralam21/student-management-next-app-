@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Skeleton from "@/components/Skeleton";
-import Search from "@/components/Search";
 
 export default function StudentList() {
   const [data,setdata] = useState([])
@@ -24,11 +23,10 @@ export default function StudentList() {
 
 
   return ( 
-    <div>
+    <div className="students-main-div">
     <div className="flex w-auto">  
-    <div className="w-3/5"><Search/></div>
-    <div className=" w-2/5 flex justify-end ">
-    <Link href={"/add"} className="bg-blue-500 text-white rounded text-center p-3 w-1/7 mr-2 self-end ">
+    <div className=" w-2/5 flex justify-start ">
+    <Link href={"/add"} className="bg-blue-500 text-white rounded text-center p-3 w-1/7 mr-2">
     Add Details
     </Link>
     </div>
