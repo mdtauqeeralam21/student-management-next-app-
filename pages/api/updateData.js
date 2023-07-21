@@ -1,10 +1,10 @@
 export default async function handler(req, res) {
-    const {id} = req.query;
+    const {id,email} = req.query;
     if (req.method === 'PUT') {
       const { fullName, email, degree,branch , yearOfPased, description,photoUrl } = req.body;
   
       try {
-        const response = await fetch(`http://localhost:9999/data/${id}`, {
+        const response = await fetch(`https://elnryz510e.execute-api.us-east-1.amazonaws.com/dev/alumni/${id}/${email}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

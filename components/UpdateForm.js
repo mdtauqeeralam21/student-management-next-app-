@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function UpdateForm(){
     const router = useRouter();
-    const {id} = router.query;
+    const {id,email} = router.query;
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -23,7 +23,7 @@ export default function UpdateForm(){
 
       const fetchStudent = async () => {
         try {
-          const response = await fetch(`http://localhost:9999/student/${id}`);
+          const response = await fetch(`https://elnryz510e.execute-api.us-east-1.amazonaws.com/dev/alumni/id/${id}`);
           const data = await response.json();
           setFormData(data);
         } catch (error) {
@@ -60,7 +60,7 @@ export default function UpdateForm(){
         e.preventDefault();
       
         try {
-          const response = await fetch(`https://elnryz510e.execute-api.us-east-1.amazonaws.com/dev/alumni/id/${id}`, {
+          const response = await fetch(`https://elnryz510e.execute-api.us-east-1.amazonaws.com/dev/alumni/${id}/${email}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
