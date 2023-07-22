@@ -3,7 +3,7 @@ export default async function handler(req, res) {
     const { id } = req.query;
     if (req.method === 'GET') {
       try {
-        const response = await fetch(`https://elnryz510e.execute-api.us-east-1.amazonaws.com/dev/alumni/id/${id}`);
+        const response = await fetch(`http://localhost:3030/alumnis/${id}`);
 
         res.status(200).json(response);
       } catch (error) {

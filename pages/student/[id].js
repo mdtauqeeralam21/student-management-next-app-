@@ -9,7 +9,7 @@ export async function getServerSideProps({ params }) {
   const { id } = params;
   
   try {
-    const response = await fetch(`https://elnryz510e.execute-api.us-east-1.amazonaws.com/dev/alumni/id/${id}`);
+    const response = await fetch(`http://localhost:3030/alumnis/${id}`);
     if (!response.ok) {
       throw new Error('Student not found');
     }
@@ -28,7 +28,7 @@ const StudentDetails = ({ student }) => {
   const [deleteMessage, setDeleteMessage] = useState('');
   const handleDelete = async () => {
     try {
-      const response = await fetch(`https://elnryz510e.execute-api.us-east-1.amazonaws.com/dev/alumni/${student.id}/${student.email}`, {
+      const response = await fetch(`http://localhost:3030/alumnis/${student.id}/${student.email}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

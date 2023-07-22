@@ -18,7 +18,7 @@ export default async function handler(req, res) {
         photoUrl };
   
       try {
-        const response = await fetch('https://elnryz510e.execute-api.us-east-1.amazonaws.com/dev/alumni/', {
+        const response = await fetch('http://localhost:3030/alumnis', {
           method: 'POST',
           headers:{
             'Content-Type': 'application/json',
