@@ -1,10 +1,9 @@
-import Login from "./Login";
+
 
 export default function HomePage() {
     return (
       <>
      <div className="wel-container">
-      <Login />
           <img className="wel-image" src="home-welcome.jpg" alt="Image" />
           <div className="wel-overlay-text">
             <span className="wel-span">
@@ -15,8 +14,8 @@ export default function HomePage() {
           </div>
         </div>
      <div className="home-main">
-        <h1>Welcome</h1>
-        <p>
+        <h1 className="home-h1">Welcome</h1>
+        <p className="home-p">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsum is that it has a more-or-less normal distribution of
