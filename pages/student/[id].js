@@ -9,7 +9,7 @@ export async function getServerSideProps({ params }) {
   const { id } = params;
   
   try {
-    const response = await fetch(`http://localhost:3030/alumnis/${id}`);
+    const response = await fetch(`http://localhost:3030/student/${id}`);
     if (!response.ok) {
       throw new Error('Student not found');
     }
@@ -82,6 +82,13 @@ const StudentDetails = ({ student }) => {
       </div>):<div></div>
       }
           </div>
+          <Link href={"/student"}>
+      <button
+      className="text-white bg-black m-4 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+      >
+        back
+      </button>
+      </Link>
         </div>
         <div className="w-2/5 pl-6 flex justify-end">
           <img
@@ -90,7 +97,9 @@ const StudentDetails = ({ student }) => {
           height={`200`} 
           alt="Student Photo" className="rounded" />
         </div>
+        
       </div>
+      
     </div>
   );
 }else{

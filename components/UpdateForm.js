@@ -23,7 +23,7 @@ export default function UpdateForm(){
 
       const fetchStudent = async () => {
         try {
-          const response = await fetch(`http://localhost:3030/alumnis/${id}`);
+          const response = await fetch(`http://localhost:3030/student/${id}`);
           const data = await response.json();
           setFormData(data);
         } catch (error) {
@@ -60,7 +60,7 @@ export default function UpdateForm(){
         e.preventDefault();
       
         try {
-          const response = await fetch(`http://localhost:3030/alumnis/${id}/${email}`, {
+          const response = await fetch(`http://localhost:3030/student/${id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ export default function UpdateForm(){
           });
       
           if (response.ok) {
-            router.push('/'); 
+            router.push('/student'); 
           } else {
             console.error('Form submission failed.');
           }
