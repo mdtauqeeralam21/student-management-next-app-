@@ -9,7 +9,7 @@ export async function getServerSideProps({ params }) {
   const { id } = params;
   
   try {
-    const response = await fetch(`http://localhost:3030/student/${id}`);
+    const response = await fetch(`http://localhost:3030/alumnis/${id}`);
     if (!response.ok) {
       throw new Error('Student not found');
     }

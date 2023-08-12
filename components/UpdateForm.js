@@ -23,7 +23,7 @@ export default function UpdateForm(){
 
       const fetchStudent = async () => {
         try {
-          const response = await fetch(`http://localhost:3030/student/${id}`);
+          const response = await fetch(`http://localhost:3030/alumnis/${id}`);
           const data = await response.json();
           setFormData(data);
         } catch (error) {

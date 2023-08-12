@@ -1,6 +1,6 @@
 // api/alumni.js
 
-const API_BASE_URL = 'http://localhost:3030/alumnis'; // Replace with your actual API base URL
+const API_BASE_URL = 'http://localhost:3030/alumnis'; 
 
 export const getAllAlumni = async () => {
   const response = await fetch(`${API_BASE_URL}`);
