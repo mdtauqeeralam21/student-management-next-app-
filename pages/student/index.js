@@ -11,8 +11,6 @@ export default function StudentList() {
     .then((json) => setdata(json))
   }
 
-  
-
   useEffect(()=>{
     click()
   },[])
@@ -20,7 +18,6 @@ export default function StudentList() {
   if(!data){
     return<Skeleton />
   }
-
 
   return ( 
     <div className="students-main-div">
