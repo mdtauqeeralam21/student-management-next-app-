@@ -9,7 +9,7 @@ export async function getServerSideProps({ params }) {
   const { id } = params;
   
   try {
-    const response = await fetch(`http://localhost:3030/alumnis/${id}`);
+    const response = await fetch(`https://my-json-server-zeta.vercel.app/api/alumnis/${id}`);
     if (!response.ok) {
       throw new Error('Student not found');
     }

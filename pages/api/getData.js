@@ -2,7 +2,7 @@
 export default async function handler(req, res) {
     if (req.method === 'GET') {
       try {
-        const response = await fetch('http://localhost:3030/alumnis');
+        const response = await fetch('https://my-json-server-zeta.vercel.app/api/alumnis');
         const data = await response.json();
         res.status(200).json(data);
       } catch (error) {
