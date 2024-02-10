@@ -9,7 +9,7 @@ export async function getServerSideProps({ params }) {
   const { id } = params;
   
   try {
-    const response = await fetch(`https://my-json-server-zeta.vercel.app/api/alumnis/${id}`);
+    const response = await fetch(`https://node-server-vercel.onrender.com/api/alumnis/${id}`);
     if (!response.ok) {
       throw new Error('Student not found');
     }
@@ -22,18 +22,18 @@ export async function getServerSideProps({ params }) {
 }
 
 
-const StudentDetails = ({ student }) => {
+const StudentDetails = ({ alumnis }) => {
   const router=useRouter();
   const {data:session}=useSession();
   const [deleteMessage, setDeleteMessage] = useState('');
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:3030/alumnis/${student.id}/${student.email}`, {
+      const response = await fetch(`https://node-server-vercel.onrender.com/api/alumnis/${alumnis.id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ id: student.id }),
+        body: JSON.stringify({ id: alumnis.id }),
       });
   
       if (response.ok) {

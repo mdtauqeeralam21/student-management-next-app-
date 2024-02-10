@@ -23,7 +23,7 @@ export default function UpdateForm(){
 
       const fetchStudent = async () => {
         try {
-          const response = await fetch(`https://my-json-server-zeta.vercel.app/api/alumnis/${id}`);
+          const response = await fetch(`https://node-server-vercel.onrender.com/${id}`);
           const data = await response.json();
           setFormData(data);
         } catch (error) {
@@ -60,7 +60,7 @@ export default function UpdateForm(){
         e.preventDefault();
       
         try {
-          const response = await fetch(`https://my-json-server-zeta.vercel.app/api/alumnis/${id}`, {
+          const response = await fetch(`https://node-server-vercel.onrender.com/${id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',

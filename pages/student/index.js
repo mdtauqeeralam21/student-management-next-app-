@@ -47,7 +47,7 @@ export default function StudentList() {
             <td>{item.yearOfPassed}</td>
             <td>{item.degree} ( {item.branch} )</td>
             <td>
-            <Link href={"/student/"+item.id}>
+            <Link href={"/"+item.id}>
               <button className="detail-btn" >Details</button>
               </Link>
             </td>

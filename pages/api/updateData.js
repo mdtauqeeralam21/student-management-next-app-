@@ -1,10 +1,10 @@
 export default async function handler(req, res) {
-    const {id,email} = req.query;
+    const {id} = req.query;
     if (req.method === 'PUT') {
       const { fullName, email, degree,branch , yearOfPased, description,photoUrl } = req.body;
   
       try {
-        const response = await fetch(`https://my-json-server-zeta.vercel.app/api/alumnis/${id}/${email}`, {
+        const response = await fetch(`https://node-server-vercel.onrender.com/api/alumnis/${id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

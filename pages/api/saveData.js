@@ -18,7 +18,7 @@ export default async function handler(req, res) {
         photoUrl };
   
       try {
-        const response = await fetch('https://my-json-server-zeta.vercel.app/api/alumnis', {
+        const response = await fetch('https://node-server-vercel.onrender.com/api/alumnis', {
           method: 'POST',
           headers:{
             'Content-Type': 'application/json',

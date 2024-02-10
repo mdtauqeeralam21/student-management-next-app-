@@ -46,7 +46,7 @@ export default function AddData(){
         e.preventDefault();
       
         try {
-          const response = await fetch('http://localhost:3030/alumnis', {
+          const response = await fetch('https://node-server-vercel.onrender.com/', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
